@@ -8,7 +8,7 @@ const Formulario = () => {
             </h2>
             <p className='text-lg mt-5 text-center mb-10'>
                 Añade Pacientes y {''}
-                <span className='text-indigo-600 font-bold'>Administralos</span>            
+                <span className='text-indigo-600  text-3xl font-bold'>Administralos</span>            
             </p>
             <form className='bg-white shadow-md rounded-lg py-10 px-5 mb-10' >
                 <div className='mb-5'>
@@ -60,6 +60,8 @@ const Formulario = () => {
                     className="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-900 cursor-pointer transition-all"
                     value="Agregar Paciente"
                 />  
+                
+                 
             </form>
         </div>
     )
