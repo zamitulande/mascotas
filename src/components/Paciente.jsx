@@ -1,26 +1,45 @@
+const Paciente = ({ paciente, setPaciente}) => {
+  const { nombre, propietario, email, fecha, sintomas } = paciente;
+  return (
+    <div className="m-3 bg-white shadow-md px-5 py-10 rounded-xl ">
+      <p className="font-bold mb-3 text-gray-700 uppercase">
+        Nombre: {""}
+        <span className="font-normal normal-case">{nombre}</span>
+      </p>
+      <p className="font-bold mb-3 text-gray-700 uppercase">
+        Propietario: {""}
+        <span className="font-normal normal-case">{propietario}</span>
+      </p>
+      <p className="font-bold mb-3 text-gray-700 uppercase">
+        Email: {""}
+        <span className="font-normal normal-case">{email}.com</span>
+      </p>
+      <p className="font-bold mb-3 text-gray-700 uppercase">
+        Fecha Alta: {""}
+        <span className="font-normal normal-case">{fecha}</span>
+      </p>
+      <p className="font-bold mb-3 text-gray-700 uppercase">
+        Sintomas: {""}
+        <span className="font-normal normal-case">{sintomas}</span>
+      </p>
 
+      <div className="flex justify-between mt-10">
+        <button
+          type="button"
+          className="py-2 px-10  bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase rounded-lg"
+          onClick={()=> setPaciente(paciente)}
+        >
+          Editar
+        </button>
+        <button
+          type="button"
+          className="py-2 px-10  bg-red-600 hover:bg-red-700 text-white font-bold uppercase rounded-lg"
+        >
+          Eliminar
+        </button>
+      </div>
+    </div>
+  );
+};
 
-const Paciente = () => {
-    return (
-        <div className='m-3 bg-white shadow-md px-5 py-10 rounded-xl '>
-                <p className='font-bold mb-3 text-gray-700 uppercase'>Nombre: {''} 
-                    <span className='font-normal normal-case'>Hook</span>
-                </p>
-                <p className='font-bold mb-3 text-gray-700 uppercase'>Propietario: {''} 
-                    <span className='font-normal normal-case'>juan</span>
-                </p>
-                <p className='font-bold mb-3 text-gray-700 uppercase'>Email: {''} 
-                    <span className='font-normal normal-case'>correo.com</span>
-                </p>
-                <p className='font-bold mb-3 text-gray-700 uppercase'>Fecha Alta: {''} 
-                    <span className='font-normal normal-case'>10-12-2021</span>
-                </p>
-                <p className='font-bold mb-3 text-gray-700 uppercase'>Sintomas: {''} 
-                    <span className='font-normal normal-case'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem beatae dolor repellendus modi suscipit officia ipsa, repudiandae, rem tempora enim optio magni odit sit facere vero aut fugit, quam vel.</span>
-                </p>
-
-            </div>
-    )
-}
-
-export default Paciente
+export default Paciente;
